@@ -1,0 +1,14 @@
+* ARM Cortex-A72 Kernel
+A basic ARM kernel
+
+* Building
+
+#+begin_src shell
+  make
+#+end_src
+
+* References
+- https://developer.arm.com/documentation/ddi0301/h/
+- https://elinux.org/RPi_Hardware
+- http://www.simtec.co.uk/products/SWLINUX/files/booting_article.html
+- http://www.raspberrypi.org/wp-content/uploads/2012/02/BCM2835-ARM-Peripherals.pdf
