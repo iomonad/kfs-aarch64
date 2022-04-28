@@ -1,11 +1,34 @@
 * ARM Cortex-A72 Kernel
 A basic ARM kernel
 
-* Building
+** Toolchain Setup
+
+Toolchain can be easily setup 
+through [[https://wiki.gentoo.org/wiki/Crossdev][Crossdev]].
+
+Install the toolchain as follow:
+
+#+begin_src shell
+sudo emerge --sync
+sudo emerge -auDN @world
+
+emerge --ask sys-devel/crossdev
+crossdev -s4 -t aarch64-unknown-linux-gnu
+#+end_src
+
+** Building
 
 #+begin_src shell
   make
 #+end_src
+
+** Testing
+*** Using QEMU
+wip
+
+** Installing
+*** Using Flashrom
+wip
 
 * References
 - https://developer.arm.com/documentation/ddi0301/h/
