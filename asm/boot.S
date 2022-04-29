@@ -5,7 +5,7 @@
 //  - https://developer.arm.com/documentation/100403/0200/register-descriptions/aarch64-system-registers/mpidr-el1--multiprocessor-affinity-register--el1
 //  - https://github.com/raspberrypi/tools/blob/master/armstubs/armstub.S#L35
 
-#include "mm.h"
+#include <mm.h>
 
 .section ".text.boot"
 
@@ -29,6 +29,6 @@ entrypoint:
   sub   x1, x1, x0
   bl    memzero
 
-//  mov   sp, #LOW_MEMORY
+  mov   sp, #LOW_MEMORY
   bl    __kernel_entrypoint
   b     hang                    // correctness, should never occur
