@@ -2,16 +2,15 @@
 
 KERNEL_FILE=kernel8.img
 DTB_FILE=devicestree/bcm2711-rpi-4-b.dtb
+MACHINE=ast2600-evb
 
-if [ -f $KERNEL_FILE ]
-then make
+if [ ! -f $KERNEL_FILE ]; then
+   make
 fi
 
 sudo qemu-system-aarch64 \
-    -m  4096 \
-    -M raspi3 \
+    -M raspi3            \
+    -machine $MACHINE    \
     -kernel $KERNEL_FILE \
-    -dtb $DTB_FILE \
-    -nographic \
-    -device usb-net,netdev=net0 \
-    -netdev user,id=net0,hostfwd=tcp::2222-:22
+    -dtb $DTB_FILE       \
+    -nographic

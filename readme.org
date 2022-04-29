@@ -1,6 +1,5 @@
 * ARM Cortex-A72 Kernel
 A basic ARM kernel
-
 ** Toolchain Setup
 
 Toolchain can be easily setup 
@@ -30,6 +29,8 @@ wip
 *** Using Flashrom
 wip
 
+* Implementation Notes
+** UART Setup
 * References
 - https://developer.arm.com/documentation/ddi0301/h/
 - https://elinux.org/RPi_Hardware
