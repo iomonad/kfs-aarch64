@@ -3,6 +3,7 @@
 // nasm arguments: aarch64-elf-as -c boot.S -o boot.o
 
 .section ".text.boot"
+
 .globl _start
 
 // Memory entry point for the kernel
