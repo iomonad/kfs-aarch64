@@ -13,4 +13,5 @@ sudo qemu-system-aarch64 \
     -machine $MACHINE    \
     -kernel $KERNEL_FILE \
     -dtb $DTB_FILE       \
+    -serial stdio        \
     -nographic

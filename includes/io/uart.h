@@ -1,6 +1,8 @@
 #ifndef UART_H
 #define UART_H
 
+#include <gpio.h>
+
 enum {
     AUX_BASE        = PERIPHERAL_BASE + 0x215000,
     AUX_ENABLES     = AUX_BASE + 4,
