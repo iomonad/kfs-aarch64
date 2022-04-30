@@ -2,16 +2,14 @@
 
 KERNEL_FILE=kernel8.img
 DTB_FILE=devicestree/bcm2711-rpi-4-b.dtb
-MACHINE=ast2600-evb
+CPU=cortex-a72
 
 if [ ! -f $KERNEL_FILE ]; then
    make
 fi
 
 sudo qemu-system-aarch64 \
-    -M raspi3            \
-    -machine $MACHINE    \
-    -kernel $KERNEL_FILE \
-    -dtb $DTB_FILE       \
-    -serial stdio        \
-    -nographic
+     -M virt,highmem=off \
+     -cpu $CPU \
+     -kernel $KERNEL_FILE \
+     -dtb $DTB_FILE
